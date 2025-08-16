@@ -54,7 +54,8 @@ export default function Hero() {
           animate={{ x: 0, opacity: 1 }}
           transition={{ type: "spring", stiffness: 70, delay: 0.6 }}
         >
-          A Junior Fullstack Developer passionate about building functional and elegant web applications.
+         {/* Software Engginer passionate about building functional and elegant web applications. */}
+         Software Engineer with a focus on developing web applications that are not only functional, but also have an elegant and user-friendly design.
         </motion.p>
       </div>
 

@@ -11,10 +11,9 @@ export const languages: Language[] = [
   { name: "TypeScript", logo: images["../assets/img/typescript.svg"].default },
   { name: "Next JS", logo: images["../assets/img/next-js.svg"].default },
   { name: "Javascript", logo: images["../assets/img/javascript.svg"].default },
-  { name: "HTML", logo: images["../assets/img/html-1.svg"].default },
-  { name: "CSS", logo: images["../assets/img/css-3.svg"].default },
+  // { name: "HTML", logo: images["../assets/img/html-1.svg"].default },
+  // { name: "CSS", logo: images["../assets/img/css-3.svg"].default },
   { name: "Node JS", logo: images["../assets/img/nodejs-icon.svg"].default },
-  { name: "Laravel", logo: images["../assets/img/laravel-2.svg"].default },
   { name: "Docker", logo: images["../assets/img/docker.svg"].default },
   { name: "Jenkins", logo: images["../assets/img/jenkins-1.svg"].default },
   { name: "NPM", logo: images["../assets/img/npm-square-red-1.svg"].default },
@@ -23,6 +22,8 @@ export const languages: Language[] = [
   { name: "MySQL", logo: images["../assets/img/mysql-3.svg"].default },
   { name: "TailwindCSS", logo: images["../assets/img/tailwind-css-2.svg"].default },
   { name: "GCP", logo: images["../assets/img/google-cloud-1.svg"].default },
+  { name: "Material UI", logo: images["../assets/img/mui.png"].default },
+  { name: "GitHub", logo: images["../assets/img/github.png"].default },
 ];
 
 export interface Experience {
@@ -72,7 +73,6 @@ export const experiences: Experience[] = [
   },
 ];
 
-// data/data.tsx
 export interface Project {
   title: string;
   description: string;
@@ -81,7 +81,6 @@ export interface Project {
   link: string;
 }
 
-// Import semua gambar PNG di folder assets sekaligus
 const imgProject = import.meta.glob("../assets/*.png", { eager: true });
 
 export const projects: Project[] = [
