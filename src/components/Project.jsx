@@ -9,6 +9,23 @@ const Project = () => {
   const startIndex = (currentPage - 1) * itemsPerPage;
   const currentProjects = projects.slice(startIndex, startIndex + itemsPerPage);
 
+  // Helper for pagination with ellipsis
+  const getPageNumbers = () => {
+    const pages = [];
+    if (totalPages <= 5) {
+      for (let i = 1; i <= totalPages; i++) pages.push(i);
+    } else {
+      if (currentPage <= 3) {
+        pages.push(1, 2, 3, 4, '...', totalPages);
+      } else if (currentPage >= totalPages - 2) {
+        pages.push(1, '...', totalPages - 3, totalPages - 2, totalPages - 1, totalPages);
+      } else {
+        pages.push(1, '...', currentPage - 1, currentPage, currentPage + 1, '...', totalPages);
+      }
+    }
+    return pages;
+  };
+
   return (
     <section id="project" className="py-12 bg-gray-900 text-white">
       <h1 className="text-5xl md:text-6xl font-bold text-center text-[#00BFA6] mb-16">
@@ -23,7 +40,7 @@ const Project = () => {
         {currentProjects.map((project, index) => (
           <div
             key={index}
-            className="bg-white shadow-lg rounded-2xl p-6 transform transition duration-300 hover:scale-105 hover:shadow-xl"
+            className="bg-white bg-opacity-80 shadow-xl rounded-2xl p-6 transform transition duration-300 hover:scale-105 hover:shadow-2xl backdrop-blur-md"
           >
             <img
               src={project.image}
@@ -38,8 +55,9 @@ const Project = () => {
               {project.technologies.map((tech) => (
                 <span
                   key={tech}
-                  className="bg-gray-200 text-gray-700 px-2 py-1 text-xs rounded-full"
+                  className="bg-gray-200 text-gray-700 px-2 py-1 text-xs rounded-full flex items-center gap-1"
                 >
+                  {/* Optionally add icon here */}
                   {tech}
                 </span>
               ))}
@@ -57,20 +75,48 @@ const Project = () => {
       </div>
 
       {/* Pagination */}
-      <div className="flex justify-end items-center mt-8 px-6">
-        {Array.from({ length: totalPages }, (_, i) => (
-          <button
-            key={i}
-            onClick={() => setCurrentPage(i + 1)}
-            className={`mx-1 px-3 py-1 rounded-lg ${
-              currentPage === i + 1
-                ? "bg-[#00BFA6] text-white"
-                : "bg-gray-700 text-gray-300 hover:bg-gray-600"
-            }`}
-          >
-            {i + 1}
-          </button>
-        ))}
+      <div className="flex justify-center items-center mt-8 gap-2 px-6">
+        <button
+          onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+          disabled={currentPage === 1}
+          className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200 font-bold text-lg shadow-md ${
+            currentPage === 1
+              ? 'bg-gray-700 text-gray-400 cursor-not-allowed'
+              : 'bg-gray-800 text-white hover:bg-[#00BFA6] hover:text-white'
+          }`}
+        >
+          &#8592;
+        </button>
+        {getPageNumbers().map((page, idx) =>
+          page === '...'
+            ? (
+                <span key={idx} className="w-10 h-10 flex items-center justify-center text-xl text-gray-400">...</span>
+              )
+            : (
+                <button
+                  key={page}
+                  onClick={() => setCurrentPage(page)}
+                  className={`w-10 h-10 rounded-full flex items-center justify-center mx-1 transition-all duration-200 font-bold text-lg shadow-md ${
+                    currentPage === page
+                      ? 'bg-[#00BFA6] text-white scale-110 shadow-lg'
+                      : 'bg-gray-800 text-gray-300 hover:bg-[#00BFA6] hover:text-white'
+                  }`}
+                >
+                  {page}
+                </button>
+              )
+        )}
+        <button
+          onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
+          disabled={currentPage === totalPages}
+          className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200 font-bold text-lg shadow-md ${
+            currentPage === totalPages
+              ? 'bg-gray-700 text-gray-400 cursor-not-allowed'
+              : 'bg-gray-800 text-white hover:bg-[#00BFA6] hover:text-white'
+          }`}
+        >
+          &#8594;
+        </button>
       </div>
     </section>
   );
