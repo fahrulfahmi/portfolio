@@ -4,7 +4,6 @@ import profileImage from "../assets/me.jpeg";
 import PDFresume from "../assets/Resume Fahrul Fahmi.pdf";
 import { FaGithub, FaLinkedin, FaEnvelope, FaDownload } from "react-icons/fa";
 
-
 function About() {
   return (
     <section className="w-full min-h-[80vh] bg-gradient-to-br from-gray-900 via-gray-800 to-[#0f3d3e] flex flex-col items-center justify-center px-4 py-16">
@@ -40,13 +39,39 @@ function About() {
               <span className="block text-2xl md:text-3xl font-bold text-[#00BFA6] mb-4 drop-shadow-lg">
                 “Every great product begins with an even better story.”
               </span>
-              I’m a <span className="text-white font-bold bg-[#00BFA6]/30 px-2 rounded">Full Stack Developer</span> with hands-on experience in building modern web applications using
-              <span className="text-[#00BFA6] font-semibold px-1">React.js</span>,
-              <span className="text-[#00BFA6] font-semibold px-1">Next.js</span>,
-              <span className="text-[#00BFA6] font-semibold px-1">Node.js</span>, and
+              I’m a{" "}
+              <span className="text-white font-bold bg-[#00BFA6]/30 px-2 rounded">
+                Full Stack Developer
+              </span>{" "}
+              with hands-on experience in building modern web applications using
+              <span className="text-[#00BFA6] font-semibold px-1">
+                React.js
+              </span>
+              ,
+              <span className="text-[#00BFA6] font-semibold px-1">Next.js</span>
+              ,
+              <span className="text-[#00BFA6] font-semibold px-1">Node.js</span>
+              , and
               <span className="text-[#00BFA6] font-semibold px-1">Go</span>.
-              Skilled in developing <span className="text-[#00BFA6] font-semibold px-1">RESTful APIs</span>, creating responsive and user-friendly interfaces, dan mengelola database secara efisien.
-              Saya juga berpengalaman dengan <span className="text-[#00BFA6] font-semibold px-1">Docker</span> dan senang menggunakan tools modern. Tertarik dengan <span className="text-[#00BFA6] font-semibold px-1">Microservice architecture</span> dan <span className="text-[#00BFA6] font-semibold px-1">gRPC</span>, saya terus mengeksplorasi best practice untuk membangun sistem terdistribusi yang robust. Selalu antusias belajar teknologi baru, saya fokus menulis kode yang bersih dan maintainable melalui <span className="text-[#00BFA6] font-semibold px-1">clean architecture</span> dan prinsip desain yang matang.
+              Skilled in developing{" "}
+              <span className="text-[#00BFA6] font-semibold px-1">
+                RESTful APIs
+              </span>
+              , creating responsive and user-friendly interfaces, and
+              efficiently managing databases. I also have understand with{" "}
+              <span className="text-[#00BFA6] font-semibold px-1">Docker</span>{" "}
+              and enjoy using modern tools. Interested in{" "}
+              <span className="text-[#00BFA6] font-semibold px-1">
+                Microservice architecture
+              </span>{" "}
+              , I continuously explore best practices for building robust,
+              distributed systems. Always enthusiastic about learning new
+              technologies, I focus on writing clean and maintainable code
+              through{" "}
+              <span className="text-[#00BFA6] font-semibold px-1">
+                clean architecture
+              </span>{" "}
+              and solid design principles.
             </p>
 
             {/* Social Links */}
