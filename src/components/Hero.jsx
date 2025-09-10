@@ -28,16 +28,12 @@ function Model() {
 export default function Hero() {
   return (
     <section
-     id="hero"
+      id="hero"
       className="relative w-full min-h-screen flex flex-col justify-center px-6 md:px-16 lg:px-32 bg-cover bg-center overflow-hidden"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
-      {/* Background blur overlay */}
       <div className="absolute inset-0 bg-black/30 backdrop z-0" />
-
-      {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent z-10" />
-
       <div className="relative z-20 max-w-4xl">
         <motion.h1
           className="text-4xl md:text-6xl mt-20 lg:text-7xl font-extrabold text-white leading-tight"
@@ -54,8 +50,9 @@ export default function Hero() {
           animate={{ x: 0, opacity: 1 }}
           transition={{ type: "spring", stiffness: 70, delay: 0.6 }}
         >
-         {/* Software Engginer passionate about building functional and elegant web applications. */}
-         Software Engineer with a focus on developing web applications that are not only functional, but also have an elegant and user-friendly design.
+          Software Engineer with a focus on developing web and mobile
+          applications that are not only functional, but also have an elegant
+          and easy-to-use design.
         </motion.p>
       </div>
 

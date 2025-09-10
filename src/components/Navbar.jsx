@@ -52,11 +52,10 @@ export default function Navbar() {
           <span className="text-lg md:text-xl font-bold text-[#00BFA6] leading-tight break-words drop-shadow">
             FAHRUL FAHMI |{" "}
             <span className="whitespace-nowrap text-white/90">Software Engineer</span>{" "}
-            <span className="hidden sm:inline text-white/60">(Web Application)</span>
+            {/* <span className="hidden sm:inline text-white/60">(Web Application)</span> */}
           </span>
         </div>
 
-        {/* Desktop Menu */}
         <div className="hidden md:flex space-x-6">
           {sections.map((section) => (
             <Link
@@ -77,7 +76,6 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Mobile Toggle */}
         <button
           className="md:hidden focus:outline-none ml-auto"
           onClick={() => setIsOpen(!isOpen)}
@@ -86,7 +84,6 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       <div
         className={`md:hidden fixed top-[68px] left-0 w-full z-40 transition-all duration-300 ${
           isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
