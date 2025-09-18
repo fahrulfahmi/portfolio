@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import profileImage from "../assets/me.jpeg";
+import profileImage from "../assets/mes.jpg";
 import PDFresume from "../assets/Resume Fahrul Fahmi.pdf";
 import { FaGithub, FaLinkedin, FaEnvelope, FaDownload } from "react-icons/fa";
 
@@ -24,11 +24,10 @@ function About() {
           className="bg-white/10 border border-[#00BFA6]/30 backdrop-blur-xl rounded-3xl p-8 md:p-12 w-full flex flex-col md:flex-row items-center md:items-start shadow-2xl hover:shadow-[0_8px_30px_rgba(0,191,166,0.18)] transition-all duration-300 group"
           whileHover={{ scale: 1.01 }}
         >
-          {/* Profile Image */}
           <motion.img
             src={profileImage}
             alt="Profile"
-            className="w-40 h-40 rounded-full mb-6 md:mb-0 md:mr-10 object-cover shadow-lg border-4 border-[#00BFA6]/60 bg-white/30"
+          className="w-70 h-80 mb-6 md:mb-0 md:mr-10 object-cover shadow-lg border-4 border-[#00BFA6]/60 bg-white/30"
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
           />
