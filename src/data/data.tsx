@@ -11,8 +11,8 @@ export const languages: Language[] = [
   { name: "TypeScript", logo: images["../assets/img/typescript.svg"].default },
   { name: "Next JS", logo: images["../assets/img/next-js.svg"].default },
   { name: "Javascript", logo: images["../assets/img/javascript.svg"].default },
-  // { name: "HTML", logo: images["../assets/img/html-1.svg"].default },
-  // { name: "CSS", logo: images["../assets/img/css-3.svg"].default },
+  { name: "HTML", logo: images["../assets/img/html-1.svg"].default },
+  { name: "CSS", logo: images["../assets/img/css-3.svg"].default },
   { name: "Node JS", logo: images["../assets/img/nodejs-icon.svg"].default },
   { name: "Docker", logo: images["../assets/img/docker.svg"].default },
   { name: "Jenkins", logo: images["../assets/img/jenkins-1.svg"].default },
@@ -24,6 +24,7 @@ export const languages: Language[] = [
   { name: "GCP", logo: images["../assets/img/google-cloud-1.svg"].default },
   { name: "Material UI", logo: images["../assets/img/mui.png"].default },
   { name: "GitHub", logo: images["../assets/img/github.png"].default },
+  { name: "vue", logo: images["../assets/img/vue.svg"].default },
 ];
 
 export interface Experience {
@@ -36,8 +37,16 @@ export interface Experience {
 export const experiences: Experience[] = [
   {
     title: "Frontend Developer",
+    company: "PT. PLN Icon Plus",
+    period: "September 2025 - Present",
+    tasks: [
+
+    ]
+  },
+  {
+    title: "Frontend Developer",
     company: "Pt. Praisindo Teknologi",
-    period: "May 2025 - Present",
+    period: "May 2025 - August 2025",
     tasks: [
       "Developed the frontend of the Wealth Management System (WMS) for Bank Danamon Indonesia using React, TypeScript, Tailwind CSS, and Material UI (MUI).",
       "Applied micro-frontend architecture for scalable and modular development.",
