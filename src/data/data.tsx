@@ -20,7 +20,10 @@ export const languages: Language[] = [
   { name: "Vite", logo: images["../assets/img/vitejs.svg"].default },
   { name: "PostgresSQL", logo: images["../assets/img/postgresql.svg"].default },
   { name: "MySQL", logo: images["../assets/img/mysql-3.svg"].default },
-  { name: "TailwindCSS", logo: images["../assets/img/tailwind-css-2.svg"].default },
+  {
+    name: "TailwindCSS",
+    logo: images["../assets/img/tailwind-css-2.svg"].default,
+  },
   { name: "GCP", logo: images["../assets/img/google-cloud-1.svg"].default },
   { name: "Material UI", logo: images["../assets/img/mui.png"].default },
   { name: "GitHub", logo: images["../assets/img/github.png"].default },
@@ -39,13 +42,18 @@ export const experiences: Experience[] = [
     title: "Frontend Developer",
     company: "PT. PLN Icon Plus",
     period: "September 2025 - Present",
-    tasks: [
-
-    ]
+   tasks: [
+      "Developed the AP2T (Integrated Service Application) interface for PLN, supporting the digitalization of customer services.",
+      "Built responsive, modern, and user-friendly applications using Vue.js.",
+      "Developed and maintained front-end features with Vue.js and Vuex.",
+      "Integrated with back-end APIs to ensure real-time and accurate data exchange.",
+      "Improved application performance and fixed bugs to enhance stability and reliability.",
+      "Implemented coding standards and created reusable components to optimize development.",
+    ],
   },
   {
     title: "Frontend Developer",
-    company: "Pt. Praisindo Teknologi",
+    company: "PT. Praisindo Teknologi",
     period: "May 2025 - August 2025",
     tasks: [
       "Developed the frontend of the Wealth Management System (WMS) for Bank Danamon Indonesia using React, TypeScript, Tailwind CSS, and Material UI (MUI).",
@@ -111,42 +119,48 @@ export const projects: Project[] = [
   },
   {
     title: "Gallery Application – Content Calendar & IT Ticketing System",
-    description: "This application is used for company activity calendar content, payroll management...",
+    description:
+      "This application is used for company activity calendar content, payroll management...",
     technologies: ["Laravel", "Bootstrap", "MySQL"],
     image: imgProject["../assets/gallery.png"].default,
     link: "https://devgallery.simgroup.co.id/login",
   },
   {
     title: "Company Profile Website",
-    description: "In this project, I helped add new features to a company profile website built using WordPress...",
+    description:
+      "In this project, I helped add new features to a company profile website built using WordPress...",
     technologies: ["WordPress", "PostgreSQL"],
     image: imgProject["../assets/websim.png"].default,
     link: "https://sim.co.id/",
   },
   {
     title: "Arzetti Law Firm – Company Profile Landing Page",
-    description: "In this project, I developed a company profile landing page for Arzetti Law Firm...",
+    description:
+      "In this project, I developed a company profile landing page for Arzetti Law Firm...",
     technologies: ["Laravel", "MySQL", "Bootstrap"],
     image: imgProject["../assets/arzetti.png"].default,
     link: "https://arzettilaw.co.id/",
   },
   {
     title: "Gajian Duluan – Company Profile Landing Page",
-    description: "In this project, I developed a company profile landing page for Gajian Duluan...",
+    description:
+      "In this project, I developed a company profile landing page for Gajian Duluan...",
     technologies: ["React.js", "Tailwind CSS"],
     image: imgProject["../assets/gd.png"].default,
     link: "https://web.gajianduluan.id/",
   },
   {
     title: "PHL – Company Profile Landing Page",
-    description: "In this project, I developed a company profile landing page for PHL...",
+    description:
+      "In this project, I developed a company profile landing page for PHL...",
     technologies: ["Laravel", "Bootstrap"],
     image: imgProject["../assets/phl.png"].default,
     link: "https://phl.co.id/",
   },
   {
     title: "JAGOTI – Learning Management System (LMS)",
-    description: "JAGOTI is a cloud-based Learning Management System designed to track employee attendance...",
+    description:
+      "JAGOTI is a cloud-based Learning Management System designed to track employee attendance...",
     technologies: ["Laravel", "GCP", "PostgreSQL", "Bootstrap"],
     image: imgProject["../assets/lms.png"].default,
     link: "https://attendancesystem.com",
@@ -155,7 +169,14 @@ export const projects: Project[] = [
     title: "MyTravelindo",
     description:
       "Website company profile yang menyediakan fitur role admin untuk mengelola konten secara mudah dan efisien...",
-    technologies: ["React JS", "Hosting", "SQL", "Tailwind CSS", "Node JS", "Express JS"],
+    technologies: [
+      "React JS",
+      "Hosting",
+      "SQL",
+      "Tailwind CSS",
+      "Node JS",
+      "Express JS",
+    ],
     image: imgProject["../assets/myone.png"].default,
     link: "https://myonetravelindo.com/",
   },
