@@ -38,7 +38,7 @@ export default function Certificate() {
   return (
     <section id="certificate" className="py-16 bg-gray-900 text-white">
       <div className="max-w-6xl mx-auto px-4">
-        <h1 className="text-3xl md:text-5xl font-bold text-[#00BFA6] mb-10 text-center">
+        <h1 className="text-3xl md:text-5xl font-bold text-[#00BFA6] mb-10 text-center tracking-wide">
           Certificates
         </h1>
 
