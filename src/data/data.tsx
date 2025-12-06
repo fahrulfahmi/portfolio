@@ -11,8 +11,6 @@ export const languages: Language[] = [
   { name: "TypeScript", logo: images["../assets/img/typescript.svg"].default },
   { name: "Next JS", logo: images["../assets/img/next-js.svg"].default },
   { name: "Javascript", logo: images["../assets/img/javascript.svg"].default },
-  { name: "HTML", logo: images["../assets/img/html-1.svg"].default },
-  { name: "CSS", logo: images["../assets/img/css-3.svg"].default },
   { name: "Node JS", logo: images["../assets/img/nodejs-icon.svg"].default },
   { name: "Docker", logo: images["../assets/img/docker.svg"].default },
   { name: "Jenkins", logo: images["../assets/img/jenkins-1.svg"].default },
@@ -26,7 +24,6 @@ export const languages: Language[] = [
   },
   { name: "GCP", logo: images["../assets/img/google-cloud-1.svg"].default },
   { name: "Material UI", logo: images["../assets/img/mui.png"].default },
-  { name: "GitHub", logo: images["../assets/img/github.png"].default },
   { name: "vue", logo: images["../assets/img/vue.svg"].default },
 ];
 
@@ -42,7 +39,7 @@ export const experiences: Experience[] = [
     title: "Frontend Developer",
     company: "PT. PLN Icon Plus",
     period: "September 2025 - Present",
-   tasks: [
+    tasks: [
       "Developed the AP2T (Integrated Service Application) interface for PLN, supporting the digitalization of customer services.",
       "Built responsive, modern, and user-friendly applications using Vue.js.",
       "Developed and maintained front-end features with Vue.js and Vuex.",
@@ -89,6 +86,75 @@ export const experiences: Experience[] = [
     ],
   },
 ];
+
+export interface Certificate {
+  title: string;
+  issuer: string;
+  year: string;
+  image: string;
+}
+
+const certificateImages = import.meta.glob("../assets/Certificate/*", {
+  eager: true,
+});
+
+export const certificates: Certificate[] = [
+  {
+    title: "React Developer",
+    issuer: "Pijar Camp",
+    year: "2024",
+    image: certificateImages["../assets/Certificate/react.png"].default,
+  },
+ {
+    title: "Backend Developer",
+    issuer: "Pijar Camp",
+    year: "2024",
+    image: certificateImages["../assets/Certificate/bacend_dev.png"].default,
+  },
+ {
+    title: "Web Design Development",
+    issuer: "kampus Gratis",
+    year: "2024",
+    image: certificateImages["../assets/Certificate/kampus_gratis.png"].default,
+  },
+  {
+    title: "Backend Golang",
+    issuer: "Great Lernning",
+    year: "2024",
+    image: certificateImages["../assets/Certificate/golang.png"].default,
+  },
+    {
+    title: "Frontend Developer (React JS)",
+    issuer: "Hacker Rank",
+    year: "2025",
+    image: certificateImages["../assets/Certificate/hacrank.png"].default,
+  },
+    {
+    title: "Web Development",
+    issuer: "Dicoding",
+    year: "2022",
+    image: certificateImages["../assets/Certificate/dicoding.png"].default,
+  },
+      {
+    title: "Frontend Developer Fundamental",
+    issuer: "Coding Studio by Kawan Koding",
+    year: "2022",
+    image: certificateImages["../assets/Certificate/coding_studio.jpg"].default,
+  },
+      {
+    title: "Google ADS Fundamental",
+    issuer: "Gogle Gapura Digital",
+    year: "2021",
+    image: certificateImages["../assets/Certificate/gapura_digital.jpg"].default,
+  },
+  {
+    title: "Udemy CCNA",
+    issuer: "Udemy",
+    year: "2023",
+    image: certificateImages["../assets/Certificate/udemy_ccna.jpg"].default,
+  },
+];
+
 
 export interface Project {
   title: string;
