@@ -14,10 +14,8 @@ export default function Navbar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
 
-      // Tutup mobile menu saat scroll
       if (isOpen) setIsOpen(false);
 
-      // Tentukan section aktif
       const offsets = sections.map((id) => {
         const el = document.getElementById(id);
         return el ? el.offsetTop - 100 : 0;
@@ -46,13 +44,11 @@ export default function Navbar() {
 >
 
       <div className="container mx-auto px-2 py-2 md:py-3 flex flex-wrap justify-between items-center">
-        {/* Logo */}
         <div className="flex items-center space-x-2 max-w-full">
           <img src={logo} alt="Logo" className="h-12 w-16 flex-shrink-0 drop-shadow-lg" />
           <span className="text-lg md:text-xl font-bold text-[#00BFA6] leading-tight break-words drop-shadow">
             FAHRUL FAHMI |{" "}
             <span className="whitespace-nowrap text-white/90">Software Engineer</span>{" "}
-            {/* <span className="hidden sm:inline text-white/60">(Web Application)</span> */}
           </span>
         </div>
 

@@ -9,7 +9,6 @@ const Project = () => {
   const startIndex = (currentPage - 1) * itemsPerPage;
   const currentProjects = projects.slice(startIndex, startIndex + itemsPerPage);
 
-  // Helper for pagination with ellipsis
   const getPageNumbers = () => {
     const pages = [];
     if (totalPages <= 5) {
@@ -35,7 +34,6 @@ const Project = () => {
         The following projects demonstrate my skills and experience through real-world examples of my work. Each project is briefly described, reflecting my ability to solve complex problems, work with various technologies, and manage projects effectively.
       </p>
 
-      {/* Grid Projects */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 px-6">
         {currentProjects.map((project, index) => (
           <div
@@ -57,7 +55,6 @@ const Project = () => {
                   key={tech}
                   className="bg-gray-200 text-gray-700 px-2 py-1 text-xs rounded-full flex items-center gap-1"
                 >
-                  {/* Optionally add icon here */}
                   {tech}
                 </span>
               ))}
@@ -74,7 +71,6 @@ const Project = () => {
         ))}
       </div>
 
-      {/* Pagination */}
       <div className="flex justify-center items-center mt-8 gap-2 px-6">
         <button
           onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}

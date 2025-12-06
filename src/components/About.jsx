@@ -14,12 +14,10 @@ function About() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        {/* Title */}
         <h1 className="text-4xl md:text-5xl font-bold text-[#00BFA6] mb-10 tracking-wide uppercase drop-shadow-lg">
           Introduction
         </h1>
 
-        {/* Card */}
         <motion.div
           className="bg-white/10 border border-[#00BFA6]/30 backdrop-blur-xl rounded-3xl p-8 md:p-12 w-full flex flex-col md:flex-row items-center md:items-start shadow-2xl hover:shadow-[0_8px_30px_rgba(0,191,166,0.18)] transition-all duration-300 group"
           whileHover={{ scale: 1.01 }}
@@ -27,12 +25,11 @@ function About() {
           <motion.img
             src={profileImage}
             alt="Profile"
-          className="w-70 h-80 mb-6 md:mb-0 md:mr-10 object-cover shadow-lg border-4 border-[#00BFA6]/60 bg-white/30"
+          className="w-70 h-80 mb-6 md:mb-0 md:mr-10 object-cover shadow-lg border-4 rounded-xl border-[#00BFA6]/60 bg-white/30"
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
           />
 
-          {/* Text & Links */}
           <div className="text-left text-gray-200 max-w-2xl w-full">
             <p className="text-base md:text-lg leading-relaxed mb-6">
               <span className="block text-2xl md:text-3xl font-bold text-[#00BFA6] mb-4 drop-shadow-lg">
@@ -73,7 +70,6 @@ function About() {
               and solid design principles.
             </p>
 
-            {/* Social Links */}
             <div className="flex space-x-5 mb-6 justify-start">
               <a
                 href="https://github.com/fahrulfahmi"
@@ -96,7 +92,6 @@ function About() {
               <a
                 href="mailto:fahmialfarobbi@gmail.com"
                 className="text-white bg-[#23272f] hover:bg-[#00BFA6] hover:text-white rounded-full p-3 shadow-md transition-all duration-300 hover:scale-110"
-                target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Email"
               >
@@ -104,7 +99,6 @@ function About() {
               </a>
             </div>
 
-            {/* Download Resume Button */}
             <motion.a
               href={PDFresume}
               download
