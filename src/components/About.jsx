@@ -1,115 +1,100 @@
 import React from "react";
 import { motion } from "framer-motion";
-import profileImage from "../assets/mes.jpg";
+import profileImage from "../assets/gua.jpeg";
 import PDFresume from "../assets/Resume Fahrul Fahmi.pdf";
 import { FaGithub, FaLinkedin, FaEnvelope, FaDownload } from "react-icons/fa";
 
 function About() {
   return (
-    <section className="w-full min-h-[80vh] bg-gradient-to-br from-gray-900 via-gray-800 to-[#0f3d3e] flex flex-col items-center justify-center px-4 py-16">
+    <section
+      id="about"
+      className="relative w-full min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0b1220] via-[#0f172a] to-[#020617] px-6 py-24"
+    >
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,191,166,0.15),transparent_40%)]" />
+
       <motion.div
-        id="about"
-        className="flex flex-col items-center text-center max-w-5xl w-full mx-auto"
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
+        className="relative max-w-5xl w-full bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-10 md:p-14 shadow-[0_20px_80px_rgba(0,0,0,0.45)]"
       >
-        <h1 className="text-4xl md:text-5xl font-bold text-[#00BFA6] mb-10 tracking-wide uppercase drop-shadow-lg">
-          Introduction
-        </h1>
-
-        <motion.div
-          className="bg-white/10 border border-[#00BFA6]/30 backdrop-blur-xl rounded-3xl p-8 md:p-12 w-full flex flex-col md:flex-row items-center md:items-start shadow-2xl hover:shadow-[0_8px_30px_rgba(0,191,166,0.18)] transition-all duration-300 group"
-          whileHover={{ scale: 1.01 }}
-        >
-          <motion.img
-            src={profileImage}
-            alt="Profile"
-          className="w-70 h-80 mb-6 md:mb-0 md:mr-10 object-cover shadow-lg border-4 rounded-xl border-[#00BFA6]/60 bg-white/30"
+        <div className="flex flex-col md:flex-row gap-14 items-center">
+          <motion.div
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
-          />
+            className="relative shrink-0"
+          >
+            <div className="absolute -inset-1 rounded-3xl bg-gradient-to-tr from-[#00BFA6]/40 to-transparent blur-lg" />
+            <img
+              src={profileImage}
+              alt="Fahrul Fahmi"
+              className="relative w-56 h-65 object-cover rounded-3xl shadow-2xl grayscale contrast-110"
+            />
+          </motion.div>
 
-          <div className="text-left text-gray-200 max-w-2xl w-full">
-            <p className="text-base md:text-lg leading-relaxed mb-6">
-              <span className="block text-2xl md:text-3xl font-bold text-[#00BFA6] mb-4 drop-shadow-lg">
-                “Every great product begins with an even better story.”
-              </span>
-              I’m a{" "}
-              <span className="text-white font-bold bg-[#00BFA6]/30 px-2 rounded">
-                Full Stack Developer
-              </span>{" "}
-              with hands-on experience in building modern web applications using
-              <span className="text-[#00BFA6] font-semibold px-1">
-                React.js
-              </span>
-              ,
-              <span className="text-[#00BFA6] font-semibold px-1">Next.js</span>
-              ,
-              <span className="text-[#00BFA6] font-semibold px-1">Node.js</span>
-              , and
-              <span className="text-[#00BFA6] font-semibold px-1">Go</span>.
-              Skilled in developing{" "}
-              <span className="text-[#00BFA6] font-semibold px-1">
-                RESTful APIs
-              </span>
-              , creating responsive and user-friendly interfaces, and
-              efficiently managing databases. I also have understand with{" "}
-              <span className="text-[#00BFA6] font-semibold px-1">Docker</span>{" "}
-              and enjoy using modern tools. Interested in{" "}
-              <span className="text-[#00BFA6] font-semibold px-1">
-                Microservice architecture
-              </span>{" "}
-              , I continuously explore best practices for building robust,
-              distributed systems. Always enthusiastic about learning new
-              technologies, I focus on writing clean and maintainable code
-              through{" "}
-              <span className="text-[#00BFA6] font-semibold px-1">
-                clean architecture
-              </span>{" "}
-              and solid design principles.
+          <div className="text-gray-300 max-w-xl">
+            <p className="text-[#00BFA6] text-xl md:text-2xl font-semibold mb-4">
+              “Every great product begins with an even better story.”
             </p>
 
-            <div className="flex space-x-5 mb-6 justify-start">
+            <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Software Engineer (Acting Tech Lead)
+            </h1>
+
+            <p className="leading-relaxed text-gray-300">
+              I build reliable and scalable digital products with a strong focus
+              on clean architecture, backend systems, and modern development
+              workflows.
+            </p>
+
+            <ul className="mt-6 space-y-2 text-gray-300">
+              <li>• Full-stack development (React, Next.js, Vue.Js,  Node.js, Go)</li>
+              <li>• RESTful API & database design</li>
+              <li>• CI/CD pipelines, Docker & Ansible automation</li>
+              <li>• Microservices & scalable system design</li>
+            </ul>
+
+            <div className="mt-8 flex flex-wrap items-center gap-5">
               <a
                 href="https://github.com/fahrulfahmi"
-                className="text-white bg-[#23272f] hover:bg-[#00BFA6] hover:text-white rounded-full p-3 shadow-md transition-all duration-300 hover:scale-110"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Github"
+                className="p-3 rounded-full bg-white/10 hover:bg-[#00BFA6] transition-all hover:scale-110"
+                aria-label="GitHub"
               >
-                <FaGithub size={24} />
+                <FaGithub size={22} />
               </a>
+
               <a
                 href="https://www.linkedin.com/in/fahrulfahmi"
-                className="text-white bg-[#23272f] hover:bg-[#00BFA6] hover:text-white rounded-full p-3 shadow-md transition-all duration-300 hover:scale-110"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="p-3 rounded-full bg-white/10 hover:bg-[#00BFA6] transition-all hover:scale-110"
                 aria-label="LinkedIn"
               >
-                <FaLinkedin size={24} />
+                <FaLinkedin size={22} />
               </a>
+
               <a
                 href="mailto:fahmialfarobbi@gmail.com"
-                className="text-white bg-[#23272f] hover:bg-[#00BFA6] hover:text-white rounded-full p-3 shadow-md transition-all duration-300 hover:scale-110"
-                rel="noopener noreferrer"
+                className="p-3 rounded-full bg-white/10 hover:bg-[#00BFA6] transition-all hover:scale-110"
                 aria-label="Email"
               >
-                <FaEnvelope size={24} />
+                <FaEnvelope size={22} />
               </a>
-            </div>
 
-            <motion.a
-              href={PDFresume}
-              download
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#00BFA6] to-[#008F7A] text-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg hover:scale-105"
-              whileHover={{ scale: 1.05 }}
-            >
-              <FaDownload className="mr-2" />
-              Download Resume
-            </motion.a>
+              <motion.a
+                href={PDFresume}
+                download
+                whileHover={{ scale: 1.05 }}
+                className="ml-auto inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[#00BFA6] to-[#008F7A] text-white font-semibold shadow-lg"
+              >
+                <FaDownload />
+                Download Resume
+              </motion.a>
+            </div>
           </div>
-        </motion.div>
+        </div>
       </motion.div>
     </section>
   );
