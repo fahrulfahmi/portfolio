@@ -26,22 +26,17 @@ const ExperienceCard = ({ title, company, period, tasks, isLeft }) => {
       >
         <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-[#00BFA6]/10 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
 
-        <h3 className="relative text-xl font-semibold text-white">
-          {title}
-        </h3>
+        <h3 className="relative text-xl font-semibold text-white">{title}</h3>
 
-        <p className="relative text-[#00BFA6] font-medium mt-1">
-          {company}
-        </p>
+        <p className="relative text-[#00BFA6] font-medium mt-1">{company}</p>
 
-        <p className="relative text-sm text-gray-400 italic mt-1">
-          {period}
-        </p>
+        <p className="relative text-sm text-gray-400 italic mt-1">{period}</p>
 
         <ul className="relative mt-4 space-y-2 text-gray-300 text-sm">
-          {tasks.map((task, i) => (
-            <li key={i} className="leading-relaxed">
-              • {task}
+          {tasks.map((task) => (
+            <li className="flex gap-2">
+              <span className="text-[#00BFA6]">▹</span>
+              <span>{task}</span>
             </li>
           ))}
         </ul>
@@ -65,11 +60,7 @@ const WorkExperience = () => {
           <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-[2px] bg-gradient-to-b from-transparent via-[#00BFA6]/40 to-transparent hidden md:block" />
 
           {experiences.map((exp, index) => (
-            <ExperienceCard
-              key={index}
-              {...exp}
-              isLeft={index % 2 === 0}
-            />
+            <ExperienceCard key={index} {...exp} isLeft={index % 2 === 0} />
           ))}
         </div>
       </div>

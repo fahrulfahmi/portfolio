@@ -36,16 +36,15 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
-    title: "Senior Software Egginer",
+    title: "Senior Software Engineer",
     company: "PT. PLN Icon Plus",
     period: "September 2025 - Present",
     tasks: [
-      "Developed the AP2T (Integrated Service Application) interface for PLN, supporting the digitalization of customer services.",
-      "Built responsive, modern, and user-friendly applications using Vue.js.",
-      "Developed and maintained front-end features with Vue.js and Vuex.",
-      "Integrated with back-end APIs to ensure real-time and accurate data exchange.",
-      "Improved application performance and fixed bugs to enhance stability and reliability.",
-      "Implemented coding standards and created reusable components to optimize development.",
+      "Led the frontend development of the AP2T (Integrated Service Application), supporting the digitalization of PLN’s customer service operations.",
+      "Built and maintained a scalable and responsive user interface using Vue.js and Vuex.",
+      "Integrated frontend applications with enterprise backend APIs to ensure real-time and accurate customer data.",
+      "Improved application performance, stability, and reliability through optimization and bug fixing.",
+      "Established coding standards and built reusable component architecture to improve team productivity and consistency.",
     ],
   },
   {
@@ -53,36 +52,34 @@ export const experiences: Experience[] = [
     company: "PT. Praisindo Teknologi",
     period: "May 2025 - August 2025",
     tasks: [
-      "Developed the frontend of the Wealth Management System (WMS) for Bank Danamon Indonesia using React, TypeScript, Tailwind CSS, and Material UI (MUI).",
-      "Applied micro-frontend architecture for scalable and modular development.",
-      "Managed CI/CD pipelines and deployments via Azure DevOps.",
-      "Improved app performance and reduced errors by 25% through debugging.",
+      "Developed the frontend of a Wealth Management System (WMS) for Bank Danamon Indonesia using React, TypeScript, Tailwind CSS, and Material UI (MUI).",
+      "Implemented micro-frontend architecture to enable scalable and modular development.",
+      "Managed CI/CD pipelines and deployments through Azure DevOps.",
+      "Improved application performance and reduced errors by 25% through debugging and optimization.",
     ],
   },
   {
-    title: "Support Apps",
+    title: "Application Support",
     company: "Swakarya Insan Mandiri",
     period: "January 2023 - January 2025",
     tasks: [
-      "Basic Testing of SIT and UAT Systems.",
-      "Create Documentation such as Guides & Project Timelines.",
-      "Understanding Basic SQL Query.",
-      "Developing and fixing bugs in coding.",
-      "Monitor full storage.",
-      "Make reports on work results.",
-      "Correct data from database.",
+      "Performed SIT and UAT testing to validate system readiness before production release.",
+      "Created technical documentation, user guides, and project timelines for internal teams.",
+      "Used SQL queries to validate, correct, and maintain data integrity in production databases.",
+      "Assisted developers by identifying bugs, verifying fixes, and supporting production issues.",
+      "Produced operational and performance reports for management and stakeholders.",
     ],
   },
   {
-    title: "Fullstack Developer",
+    title: "Full-Stack Developer",
     company: "Freelance",
     period: "July 2023 - Present",
     tasks: [
-      "Building and maintaining web applications using React.js.",
-      "Creating responsive UI with Tailwind CSS.",
-      "Implementing authentication with JWT.",
-      "Optimizing performance and SEO.",
-      "Fixing bugs and enhancing UI/UX.",
+      "Built and maintained production-ready web applications using React.js.",
+      "Designed responsive and modern user interfaces with Tailwind CSS.",
+      "Implemented secure authentication and API integration using JWT.",
+      "Optimized application performance, SEO, and overall user experience.",
+      "Continuously improved applications through bug fixing and feature enhancements.",
     ],
   },
 ];
@@ -105,13 +102,13 @@ export const certificates: Certificate[] = [
     year: "2024",
     image: certificateImages["../assets/Certificate/react.png"].default,
   },
- {
+  {
     title: "Backend Developer",
     issuer: "Pijar Camp",
     year: "2024",
     image: certificateImages["../assets/Certificate/bacend_dev.png"].default,
   },
- {
+  {
     title: "Web Design Development",
     issuer: "kampus Gratis",
     year: "2024",
@@ -123,29 +120,30 @@ export const certificates: Certificate[] = [
     year: "2024",
     image: certificateImages["../assets/Certificate/golang.png"].default,
   },
-    {
+  {
     title: "Frontend Developer (React JS)",
     issuer: "Hacker Rank",
     year: "2025",
     image: certificateImages["../assets/Certificate/hacrank.png"].default,
   },
-    {
+  {
     title: "Web Development",
     issuer: "Dicoding",
     year: "2022",
     image: certificateImages["../assets/Certificate/dicoding.png"].default,
   },
-      {
+  {
     title: "Frontend Developer Fundamental",
     issuer: "Coding Studio by Kawan Koding",
     year: "2022",
     image: certificateImages["../assets/Certificate/coding_studio.jpg"].default,
   },
-      {
+  {
     title: "Google ADS Fundamental",
     issuer: "Gogle Gapura Digital",
     year: "2021",
-    image: certificateImages["../assets/Certificate/gapura_digital.jpg"].default,
+    image:
+      certificateImages["../assets/Certificate/gapura_digital.jpg"].default,
   },
   {
     title: "Udemy CCNA",
@@ -154,7 +152,6 @@ export const certificates: Certificate[] = [
     image: certificateImages["../assets/Certificate/udemy_ccna.jpg"].default,
   },
 ];
-
 
 export interface Project {
   title: string;
@@ -170,15 +167,15 @@ export const projects: Project[] = [
   {
     title: "SIGESIT – Attendance Management System for Cleaning Services",
     description:
-      "As part of the Support Apps team, I played a role in developing and maintaining an attendance management application for a cleaning service...",
+      "Built and maintained an internal attendance management system used by cleaning service teams to track daily work, shifts, and reports. The system was deployed on GCP using Docker, with PostgreSQL as the main database to ensure reliable and scalable data storage.",
     technologies: ["Laravel", "Bootstrap", "PostgreSQL", "GCP", "Docker"],
     image: imgProject["../assets/sigesit.png"].default,
     link: "https://github.com/fahrulfahmi/SIGESIT",
   },
   {
-    title: "IDNS (Infotech Digital Nusantara) – Company Profile Website",
+    title: "IDNS – Company Profile & Business Website",
     description:
-      "As a full-stack developer, I designed and built a company profile website for IDNS...",
+      "Designed and developed a company profile and business website for Infotech Digital Nusantara using a modern full-stack approach. The system was built with React and Node.js to provide fast, responsive UI and flexible backend content management.",
     technologies: ["React.js", "Node.js", "MySQL", "TailwindCSS"],
     image: imgProject["../assets/IDNS.png"].default,
     link: "https://idns.co.id/",
@@ -186,39 +183,39 @@ export const projects: Project[] = [
   {
     title: "Gallery Application – Content Calendar & IT Ticketing System",
     description:
-      "This application is used for company activity calendar content, payroll management...",
+      "Developed an internal application for managing company content calendars, payroll-related data, and IT ticketing. The system centralized operational workflows into one platform to improve visibility and reduce manual coordination.",
     technologies: ["Laravel", "Bootstrap", "MySQL"],
     image: imgProject["../assets/gallery.png"].default,
     link: "https://devgallery.simgroup.co.id/login",
   },
   {
-    title: "Company Profile Website",
+    title: "SIM Group – Corporate Website",
     description:
-      "In this project, I helped add new features to a company profile website built using WordPress...",
+      "Enhanced and extended a corporate website built on WordPress by adding new features and improving content management, helping the company maintain a modern and up-to-date online presence.",
     technologies: ["WordPress", "PostgreSQL"],
     image: imgProject["../assets/websim.png"].default,
     link: "https://sim.co.id/",
   },
   {
-    title: "Arzetti Law Firm – Company Profile Landing Page",
+    title: "Arzetti Law Firm – Corporate Website",
     description:
-      "In this project, I developed a company profile landing page for Arzetti Law Firm...",
+      "Built a professional corporate website for a law firm using Laravel and MySQL, providing a clean and reliable platform to present legal services and company information.",
     technologies: ["Laravel", "MySQL", "Bootstrap"],
     image: imgProject["../assets/arzetti.png"].default,
     link: "https://arzettilaw.co.id/",
   },
   {
-    title: "Gajian Duluan – Company Profile Landing Page",
+    title: "Gajian Duluan – Fintech Landing Page",
     description:
-      "In this project, I developed a company profile landing page for Gajian Duluan...",
+      "Developed a responsive fintech landing page using React and Tailwind CSS to support marketing campaigns and improve user engagement for the Gajian Duluan platform.",
     technologies: ["React.js", "Tailwind CSS"],
     image: imgProject["../assets/gd.png"].default,
     link: "https://web.gajianduluan.id/",
   },
   {
-    title: "PHL – Company Profile Landing Page",
+    title: "PHL – Corporate Website",
     description:
-      "In this project, I developed a company profile landing page for PHL...",
+      "Created a company profile website for PHL using Laravel and Bootstrap, helping the business present its services in a clear and professional way.",
     technologies: ["Laravel", "Bootstrap"],
     image: imgProject["../assets/phl.png"].default,
     link: "https://phl.co.id/",
@@ -226,24 +223,25 @@ export const projects: Project[] = [
   {
     title: "JAGOTI – Learning Management System (LMS)",
     description:
-      "JAGOTI is a cloud-based Learning Management System designed to track employee attendance...",
+      "Built a cloud-based Learning Management System to manage employee attendance and learning activities, using PostgreSQL and Google Cloud Platform to support reliable data processing and scalability.",
     technologies: ["Laravel", "GCP", "PostgreSQL", "Bootstrap"],
     image: imgProject["../assets/lms.png"].default,
     link: "https://attendancesystem.com",
   },
   {
-    title: "MyTravelindo",
+    title: "MyTravelindo – Travel Management Website",
     description:
-      "Website company profile yang menyediakan fitur role admin untuk mengelola konten secara mudah dan efisien...",
+      "Developed a full-stack travel company website with admin role management for content and data updates, enabling efficient operation and easy maintenance for business users.",
     technologies: [
       "React JS",
-      "Hosting",
-      "SQL",
-      "Tailwind CSS",
       "Node JS",
       "Express JS",
+      "SQL",
+      "Tailwind CSS",
+      "Hosting",
     ],
     image: imgProject["../assets/myone.png"].default,
     link: "https://myonetravelindo.com/",
   },
 ];
+

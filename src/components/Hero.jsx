@@ -50,9 +50,8 @@ export default function Hero() {
           animate={{ x: 0, opacity: 1 }}
           transition={{ type: "spring", stiffness: 70, delay: 0.6 }}
         >
-          Software Engineer with a focus on developing web and mobile
-          applications that are not only functional, but also have an elegant
-          and easy-to-use design.
+          I build production-ready web applications using React, Vue, Golang, and
+          CI/CD pipelines — from code to deployment.
         </motion.p>
       </div>
 

@@ -38,20 +38,46 @@ function About() {
             </p>
 
             <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Software Engineer (Acting Tech Lead)
+              Software Engineer | Acting Tech Lead
             </h1>
 
             <p className="leading-relaxed text-gray-300">
-              I build reliable and scalable digital products with a strong focus
-              on clean architecture, backend systems, and modern development
-              workflows.
+              I build{" "}
+              <span className="text-white font-medium">
+                production-ready, scalable digital products
+              </span>
+              with a strong focus on clean architecture, robust backend systems,
+              and modern DevOps workflows — from code to deployment.
             </p>
 
             <ul className="mt-6 space-y-2 text-gray-300">
-              <li>• Full-stack development (React, Next.js, Vue.Js,  Node.js, Go)</li>
-              <li>• RESTful API & database design</li>
-              <li>• CI/CD pipelines, Docker & Ansible automation</li>
-              <li>• Microservices & scalable system design</li>
+              <li>
+                • Full-stack development with{" "}
+                <span className="text-white">
+                  React, Next.js, Vue, Node.js, and Go
+                </span>
+              </li>
+              <li>
+                •{" "}
+                <span className="text-white">
+                  RESTful API & database design
+                </span>{" "}
+                built for real-world workloads
+              </li>
+              <li>
+                •{" "}
+                <span className="text-white">
+                  CI/CD pipelines, Docker & Ansible automation
+                </span>{" "}
+                for reliable releases
+              </li>
+              <li>
+                •{" "}
+                <span className="text-white">
+                  Microservices & scalable system design
+                </span>{" "}
+                for growing products
+              </li>
             </ul>
 
             <div className="mt-8 flex flex-wrap items-center gap-5">
