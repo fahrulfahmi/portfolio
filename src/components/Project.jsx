@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {projects} from "../data/data";
+import { projects } from "../data/data";
 
 const Project = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -15,11 +15,26 @@ const Project = () => {
       for (let i = 1; i <= totalPages; i++) pages.push(i);
     } else {
       if (currentPage <= 3) {
-        pages.push(1, 2, 3, 4, '...', totalPages);
+        pages.push(1, 2, 3, 4, "...", totalPages);
       } else if (currentPage >= totalPages - 2) {
-        pages.push(1, '...', totalPages - 3, totalPages - 2, totalPages - 1, totalPages);
+        pages.push(
+          1,
+          "...",
+          totalPages - 3,
+          totalPages - 2,
+          totalPages - 1,
+          totalPages
+        );
       } else {
-        pages.push(1, '...', currentPage - 1, currentPage, currentPage + 1, '...', totalPages);
+        pages.push(
+          1,
+          "...",
+          currentPage - 1,
+          currentPage,
+          currentPage + 1,
+          "...",
+          totalPages
+        );
       }
     }
     return pages;
@@ -31,7 +46,9 @@ const Project = () => {
         My Work
       </h1>
       <p className="text-lg text-center mx-auto w-4/5 md:w-2/3 lg:w-1/2 text-gray-300 mb-12">
-        The following projects demonstrate my skills and experience through real-world examples of my work. Each project is briefly described, reflecting my ability to solve complex problems, work with various technologies, and manage projects effectively.
+        These projects represent real-world systems I’ve built and maintained —
+        ranging from internal enterprise tools to public-facing web
+        applications.
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 px-6">
@@ -65,7 +82,7 @@ const Project = () => {
               rel="noopener noreferrer"
               className="text-blue-500 hover:underline font-medium"
             >
-              View Project →
+              View System →
             </a>
           </div>
         ))}
@@ -77,38 +94,43 @@ const Project = () => {
           disabled={currentPage === 1}
           className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200 font-bold text-lg shadow-md ${
             currentPage === 1
-              ? 'bg-gray-700 text-gray-400 cursor-not-allowed'
-              : 'bg-gray-800 text-white hover:bg-[#00BFA6] hover:text-white'
+              ? "bg-gray-700 text-gray-400 cursor-not-allowed"
+              : "bg-gray-800 text-white hover:bg-[#00BFA6] hover:text-white"
           }`}
         >
           &#8592;
         </button>
         {getPageNumbers().map((page, idx) =>
-          page === '...'
-            ? (
-                <span key={idx} className="w-10 h-10 flex items-center justify-center text-xl text-gray-400">...</span>
-              )
-            : (
-                <button
-                  key={page}
-                  onClick={() => setCurrentPage(page)}
-                  className={`w-10 h-10 rounded-full flex items-center justify-center mx-1 transition-all duration-200 font-bold text-lg shadow-md ${
-                    currentPage === page
-                      ? 'bg-[#00BFA6] text-white scale-110 shadow-lg'
-                      : 'bg-gray-800 text-gray-300 hover:bg-[#00BFA6] hover:text-white'
-                  }`}
-                >
-                  {page}
-                </button>
-              )
+          page === "..." ? (
+            <span
+              key={idx}
+              className="w-10 h-10 flex items-center justify-center text-xl text-gray-400"
+            >
+              ...
+            </span>
+          ) : (
+            <button
+              key={page}
+              onClick={() => setCurrentPage(page)}
+              className={`w-10 h-10 rounded-full flex items-center justify-center mx-1 transition-all duration-200 font-bold text-lg shadow-md ${
+                currentPage === page
+                  ? "bg-[#00BFA6] text-white scale-110 shadow-lg"
+                  : "bg-gray-800 text-gray-300 hover:bg-[#00BFA6] hover:text-white"
+              }`}
+            >
+              {page}
+            </button>
+          )
         )}
         <button
-          onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
+          onClick={() =>
+            setCurrentPage((prev) => Math.min(prev + 1, totalPages))
+          }
           disabled={currentPage === totalPages}
           className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200 font-bold text-lg shadow-md ${
             currentPage === totalPages
-              ? 'bg-gray-700 text-gray-400 cursor-not-allowed'
-              : 'bg-gray-800 text-white hover:bg-[#00BFA6] hover:text-white'
+              ? "bg-gray-700 text-gray-400 cursor-not-allowed"
+              : "bg-gray-800 text-white hover:bg-[#00BFA6] hover:text-white"
           }`}
         >
           &#8594;
