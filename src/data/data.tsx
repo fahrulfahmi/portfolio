@@ -1,4 +1,4 @@
-export const images = import.meta.glob("../assets/img/*", { eager: true });
+export const images = (import.meta as any).glob("../assets/img/*", { eager: true });
 
 export interface Language {
   name: string;
@@ -91,7 +91,7 @@ export interface Certificate {
   image: string;
 }
 
-const certificateImages = import.meta.glob("../assets/Certificate/*", {
+const certificateImages = (import.meta as any).glob("../assets/Certificate/*", {
   eager: true,
 });
 
@@ -161,9 +161,23 @@ export interface Project {
   link: string;
 }
 
-const imgProject = import.meta.glob("../assets/*.png", { eager: true });
+const imgProject = (import.meta as any).glob("../assets/*.png", { eager: true });
 
 export const projects: Project[] = [
+  {
+  title: "Tumbuh – Professional Networking Platform",
+  description:
+    "Developed and maintained scalable frontend features for Tumbuh, a professional networking platform focused on community engagement and knowledge sharing. Built responsive user interfaces, media management, social interactions, content discovery, and optimized user experience across desktop and mobile devices.",
+  technologies: [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "REST API"
+  ],
+  image: imgProject["../assets/tumbuh.png"].default,
+  link: "https://tumbuh.coorvo.com/en",
+},
   {
     title: "SIGESIT – Attendance Management System for Cleaning Services",
     description:
