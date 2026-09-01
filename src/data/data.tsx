@@ -41,7 +41,7 @@ export const experiences: Experience[] = [
     periode: "September 2026 - Present",
     taks: [
       "consume aplikation for apps and taks and pipline code"
-    ]
+    ],
   },
   {
     title: "Senior Software Engineer",
