@@ -36,14 +36,6 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
-    title: "Software Engginer",
-    Company: "PT Bank Ganesha TBK",
-    periode: "September 2026 - Present",
-    taks: [
-      "consume aplikation for apps and taks and pipline code"
-    ],
-  },
-  {
     title: "Senior Software Engineer",
     company: "PT. PLN Icon Plus",
     period: "September 2025 - Juli 2026",
