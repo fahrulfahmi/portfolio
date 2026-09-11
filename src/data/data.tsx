@@ -35,10 +35,24 @@ export interface Experience {
 }
 
 export const experiences: Experience[] = [
+ {
+  title: "Senior Software Engineer",
+  company: "PT Bank Ganesha Tbk",
+  period: "September 2025 - Present",
+  tasks: [
+    "Develop and maintain frontend applications using React.js and TypeScript.",
+    "Develop backend services using Go for application and API requirements.",
+    "Integrate frontend applications with REST APIs and collaborate with backend developers.",
+    "Coordinate with DevOps team for application deployment, environment configuration, and CI/CD processes.",
+    "Analyze business and technical requirements and translate them into scalable application solutions.",
+    "Perform troubleshooting, debugging, and performance improvements across application features.",
+    "Collaborate with QA, Backend, DevOps, and other stakeholders throughout the development lifecycle."
+  ]
+},
   {
     title: "Senior Software Engineer",
     company: "PT. PLN Icon Plus",
-    period: "September 2025 - Juli 2026",
+    period: "September 2025 - June 2026",
     tasks: [
       "Led the frontend development of the AP2T (Integrated Service Application), supporting the digitalization of PLN’s customer service operations.",
       "Built and maintained a scalable and responsive user interface using Vue.js and Vuex.",
